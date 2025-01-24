@@ -1,0 +1,16 @@
+common --lockfile_mode=off
+
+# there are some internal things still on WORKSPACE for now
+common --enable_workspace=true
+
+# **********************************
+# BUILD TROUBLESHOOTING
+# **********************************
+# These settings make it easier to figure out why a build may not have gone as expected.
+# By setting test_output=errors, we get the error output directly in stdout (instead of just
+# a link to a log file). The explain parameter outputs the build plan for the last build,
+# which can be somewhat helpful if you wonder why some packages get rebuilt.
+common --test_output=errors
+common --verbose_explanations
+common --explain=/tmp/bazel_explain.txt
+

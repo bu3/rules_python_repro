@@ -1,0 +1,9 @@
+# bazel output directories
+bazel-*
+
+# misc
+.DS_Store
+
+#IDE
+.idea/
+.ijwb/

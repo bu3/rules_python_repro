@@ -1,0 +1,15 @@
+load("@aspect_rules_py//py:defs.bzl", "py_library", "py_test")
+
+py_library(
+    name = "calculator",
+    srcs = ["calculator.py"],
+    imports = ["../../../.."],
+    visibility = ["//:__subpackages__"],
+)
+
+py_test(
+    name = "calculator_test",
+    srcs = ["calculator_test.py"],
+    imports = ["../../../.."],
+    deps = [":calculator"],
+)
