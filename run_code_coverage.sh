@@ -1,3 +1,7 @@
+#!/bin/bash
+
+set -e
+
 rm -f bazel-out/_coverage/_coverage_report.dat
 
 bazel coverage --cache_test_results=no --action_env=VERBOSE_COVERAGE=true --combined_report=lcov -- projects/libs/examples/calculator/...
