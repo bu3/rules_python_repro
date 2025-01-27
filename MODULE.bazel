@@ -5,9 +5,6 @@ For now, internal deps e.g. shared-tools are brought in with WORKSPACE.
 
 module(name = "python_sfdc_bazel")
 
-mirror_path = "https://rpm.repo.local.sfdc.net/artifactory/strata-blobs/sfdc-bazel"
-
-docker_registry = "docker.repo.local.sfdc.net"
 
 # direct dependencies
 # python deps
@@ -24,7 +21,6 @@ bazel_dep(name = "gazelle", version = "0.41.0", repo_name = "bazel_gazelle")
 # docker related deps
 bazel_dep(name = "rules_oci", version = "2.2.0")
 bazel_dep(name = "aspect_bazel_lib", version = "2.11.0")
-bazel_dep(name = "container_structure_test", version = "1.19.1")
 
 # transitive dependencies that require configuration
 bazel_dep(name = "rules_go", version = "0.52.0", repo_name = "io_bazel_rules_go")
