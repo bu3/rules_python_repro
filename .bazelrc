@@ -1,8 +1,5 @@
 common --lockfile_mode=off
 
-# there are some internal things still on WORKSPACE for now
-common --enable_workspace=true
-
 # **********************************
 # BUILD TROUBLESHOOTING
 # **********************************
