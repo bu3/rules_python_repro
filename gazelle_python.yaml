@@ -1,0 +1,93 @@
+# GENERATED FILE - DO NOT EDIT!
+#
+# To update this file, run:
+#   bazel run //:gazelle_python_manifest.update
+
+manifest:
+  modules_mapping:
+    annotated_types: annotated_types
+    ansi: ansi
+    anyio: anyio
+    asgiref: asgiref
+    blinker: blinker
+    certifi: certifi
+    cffi: cffi
+    charset_normalizer: charset_normalizer
+    click: click
+    coverage: coverage
+    cryptography: cryptography
+    deprecated: Deprecated
+    dotenv: python_dotenv
+    fastapi: fastapi_slim
+    flask: flask
+    h11: h11
+    httptools: httptools
+    idna: idna
+    importlib_metadata: importlib_metadata
+    importlib_resources: importlib_resources
+    itsdangerous: itsdangerous
+    jinja2: jinja2
+    markupsafe: MarkupSafe
+    opentelemetry.attributes: opentelemetry_api
+    opentelemetry.baggage: opentelemetry_api
+    opentelemetry.context: opentelemetry_api
+    opentelemetry.environment_variables: opentelemetry_api
+    opentelemetry.exporter.zipkin.encoder: opentelemetry_exporter_zipkin_json
+    opentelemetry.exporter.zipkin.json: opentelemetry_exporter_zipkin_json
+    opentelemetry.exporter.zipkin.node_endpoint: opentelemetry_exporter_zipkin_json
+    opentelemetry.instrumentation.asgi: opentelemetry_instrumentation_asgi
+    opentelemetry.instrumentation.auto_instrumentation: opentelemetry_instrumentation
+    opentelemetry.instrumentation.bootstrap: opentelemetry_instrumentation
+    opentelemetry.instrumentation.bootstrap_gen: opentelemetry_instrumentation
+    opentelemetry.instrumentation.dependencies: opentelemetry_instrumentation
+    opentelemetry.instrumentation.distro: opentelemetry_instrumentation
+    opentelemetry.instrumentation.environment_variables: opentelemetry_instrumentation
+    opentelemetry.instrumentation.fastapi: opentelemetry_instrumentation_fastapi
+    opentelemetry.instrumentation.instrumentor: opentelemetry_instrumentation
+    opentelemetry.instrumentation.logging: opentelemetry_instrumentation_logging
+    opentelemetry.instrumentation.propagators: opentelemetry_instrumentation
+    opentelemetry.instrumentation.requests: opentelemetry_instrumentation_requests
+    opentelemetry.instrumentation.sqlcommenter_utils: opentelemetry_instrumentation
+    opentelemetry.instrumentation.utils: opentelemetry_instrumentation
+    opentelemetry.instrumentation.version: opentelemetry_instrumentation
+    opentelemetry.metrics: opentelemetry_api
+    opentelemetry.propagate: opentelemetry_api
+    opentelemetry.propagators.b3: opentelemetry_propagator_b3
+    opentelemetry.propagators.composite: opentelemetry_api
+    opentelemetry.propagators.textmap: opentelemetry_api
+    opentelemetry.sdk.environment_variables: opentelemetry_sdk
+    opentelemetry.sdk.error_handler: opentelemetry_sdk
+    opentelemetry.sdk.metrics: opentelemetry_sdk
+    opentelemetry.sdk.resources: opentelemetry_sdk
+    opentelemetry.sdk.trace: opentelemetry_sdk
+    opentelemetry.sdk.util: opentelemetry_sdk
+    opentelemetry.sdk.version: opentelemetry_sdk
+    opentelemetry.semconv: opentelemetry_semantic_conventions
+    opentelemetry.trace: opentelemetry_api
+    opentelemetry.util.http: opentelemetry_util_http
+    opentelemetry.util.re: opentelemetry_api
+    opentelemetry.util.types: opentelemetry_api
+    opentelemetry.version: opentelemetry_api
+    packaging: packaging
+    pycparser: pycparser
+    pydantic: pydantic
+    pydantic_core: pydantic_core
+    pytz: pytz
+    requests: requests
+    sfdc.common: sfdc_commons
+    sfdc.scone: sfdc_shortbread
+    sniffio: sniffio
+    starlette: starlette
+    typing_extensions: typing_extensions
+    urllib3: urllib3
+    uvicorn: uvicorn
+    uvloop: uvloop
+    watchfiles: watchfiles
+    websockets: websockets
+    werkzeug: werkzeug
+    wrapt: wrapt
+    yaml: PyYAML
+    zipp: zipp
+  pip_repository:
+    name: pip
+integrity: 97a5664af729dcd8156d4627aac89f1adfeb6f1f2a7411dcc3c887459c1a4aae

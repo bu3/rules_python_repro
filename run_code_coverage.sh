@@ -1,6 +1,6 @@
 rm -f bazel-out/_coverage/_coverage_report.dat
 
-bazel coverage --cache_test_results=no --action_env=VERBOSE_COVERAGE=true --combined_report=lcov --instrumentation_filter "^//projects/libs/examples/calculator[/:]" -- projects/libs/examples/calculator/...
+bazel coverage --cache_test_results=no --action_env=VERBOSE_COVERAGE=true --combined_report=lcov -- projects/libs/examples/calculator/...
 
 ls bazel-out/darwin_arm64-fastbuild/testlogs/projects/libs/examples/calculator/calculator_test/coverage.dat
 
