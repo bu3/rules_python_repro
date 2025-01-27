@@ -1,8 +1,3 @@
-"""
-All new bazel deps should be brought in with MODULE.bazel (aka bzlmod).
-For now, internal deps e.g. shared-tools are brought in with WORKSPACE.
-"""
-
 module(name = "python_sfdc_bazel")
 
 
@@ -10,21 +5,6 @@ module(name = "python_sfdc_bazel")
 # python deps
 bazel_dep(name = "aspect_rules_py", version = "1.2.1")
 bazel_dep(name = "rules_python", version = "1.1.0")
-
-#sonar qube
-bazel_dep(name = "bazel_sonarqube", version = "1.0.2")
-
-# gazelle deps
-bazel_dep(name = "rules_python_gazelle_plugin", version = "1.1.0")
-bazel_dep(name = "gazelle", version = "0.41.0", repo_name = "bazel_gazelle")
-
-# docker related deps
-bazel_dep(name = "rules_oci", version = "2.2.0")
-bazel_dep(name = "aspect_bazel_lib", version = "2.11.0")
-
-# transitive dependencies that require configuration
-bazel_dep(name = "rules_go", version = "0.52.0", repo_name = "io_bazel_rules_go")
-
 
 # python toolchain configuration
 python_version = "3.11.10"
@@ -48,22 +28,3 @@ pip.parse(
     requirements_lock = "//:requirements_lock.txt",
 )
 use_repo(pip, "pip")
-
-# configure custom golang toolchain (required for gazelle transitively)
-go_sdk = use_extension("@io_bazel_rules_go//go:extensions.bzl", "go_sdk")
-go_sdk.download(
-    name = "go_sdk",
-    sdks = {
-        # these are mirrored internally as described by:
-        #  https://git.soma.salesforce.com/services/sfdc-bazel/tree/main/tools/mirrordeps#manual-mirroring
-        "darwin_arm64": ("go1.22.8.darwin-arm64.tar.gz", "725bd8491bc302af9e7188b259db2f14dae6be4fb4f31965be4f76c9af84ff45"),
-        "darwin_amd64": ("go1.22.8.darwin-amd64.tar.gz", "ef0f7c1da5c8ac1eed0361381591a55effc90f9ca63b12cfd319f3f8ee113c12"),
-        "linux_amd64": ("go1.22.8.linux-amd64.tar.gz", "5f467d29fc67c7ae6468cb6ad5b047a274bae8180cac5e0b7ddbfeba3e47e18f"),
-        "linux_arm64": ("go1.22.8.linux-arm64.tar.gz", "5c616b32dab04bb8c4c8700478381daea0174dc70083e4026321163879278a4a"),
-    },
-    urls = [
-        "https://dl.google.com/go/{}",
-    ],
-    version = "1.22.8",
-)
-use_repo(go_sdk, "go_sdk")
