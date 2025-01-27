@@ -11,7 +11,7 @@ docker_registry = "docker.repo.local.sfdc.net"
 
 # direct dependencies
 # python deps
-bazel_dep(name = "aspect_rules_py", version = "1.1.0")
+bazel_dep(name = "aspect_rules_py", version = "1.2.1")
 bazel_dep(name = "rules_python", version = "1.1.0")
 
 #sonar qube
