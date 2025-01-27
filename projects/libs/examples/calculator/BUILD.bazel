@@ -1,4 +1,4 @@
-load("@aspect_rules_py//py:defs.bzl", "py_library", "py_test")
+load("@aspect_rules_py//py:defs.bzl", "py_library", "py_test", "py_pytest_main")
 
 py_library(
     name = "calculator",
@@ -10,4 +10,12 @@ py_test(
     name = "calculator_test",
     srcs = ["calculator_test.py"],
     deps = [":calculator"],
+)
+
+py_pytest_main(
+    name = "__test__",
+    deps = [
+        "@pip//coverage",
+        "@pip//pytest",
+    ],
 )
